@@ -403,6 +403,120 @@ input:focus-visible {
   color: var(--danger);
 }
 
+.chart-panel {
+  background: var(--card-background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+}
+
+.chart-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chart-panel__title {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--text-primary);
+}
+
+.chart-panel__subtitle {
+  margin: 4px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.chart-panel__badge {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.16);
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.chart {
+  position: relative;
+  height: 220px;
+  border-radius: var(--radius-card);
+  background: linear-gradient(
+    180deg,
+    rgba(37, 99, 235, 0.1),
+    rgba(15, 23, 42, 0)
+  );
+  overflow: hidden;
+}
+
+.chart__grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0.06) 1px,
+    transparent 1px
+  );
+  background-size: 100% 36px;
+}
+
+.chart__line {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 24px;
+  height: 120px;
+  border-bottom: 2px solid var(--accent);
+  border-left: 2px solid var(--accent);
+  border-radius: 0 0 0 12px;
+  clip-path: polygon(
+    0% 100%,
+    12% 82%,
+    24% 88%,
+    38% 65%,
+    54% 72%,
+    70% 40%,
+    84% 48%,
+    100% 10%,
+    100% 100%
+  );
+}
+
+.chart__point {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--text-primary);
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.2);
+}
+
+.chart__point--1 {
+  left: 42px;
+  bottom: 94px;
+}
+.chart__point--2 {
+  left: 92px;
+  bottom: 82px;
+}
+.chart__point--3 {
+  left: 142px;
+  bottom: 122px;
+}
+.chart__point--4 {
+  left: 212px;
+  bottom: 80px;
+}
+.chart__point--5 {
+  left: 274px;
+  bottom: 64px;
+}
+.chart__point--6 {
+  left: 338px;
+  bottom: 48px;
+}
+
 .footer {
   padding: 20px 32px 28px;
   color: var(--text-secondary);
@@ -461,6 +575,12 @@ input:focus-visible {
   }
 
   .content-panel__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .chart-panel__header {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
