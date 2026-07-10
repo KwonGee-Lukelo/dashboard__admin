@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <aside class="sidebar" aria-label="Navigation latérale">
+        <div class="sidebar__brand">
+          <div class="sidebar__logo" aria-hidden="true">A</div>
+          <div>
+            <h1 class="sidebar__title">AkiAdmin</h1>
+            <p class="sidebar__subtitle">Dashboard</p>
+          </div>
+        </div>
+
+        <nav class="sidebar__nav">
+          <a class="sidebar__link sidebar__link--active" href="#"
+            >Vue d'ensemble</a
+          >
+          <a class="sidebar__link" href="#">Utilisateurs</a>
+          <a class="sidebar__link" href="#">Rapports</a>
+          <a class="sidebar__link" href="#">Messages</a>
+          <a class="sidebar__link" href="#">Paramètres</a>
+        </nav>
+      </aside>
+
+      <div class="dashboard__content">
+        <header class="header">
+          <div class="header__intro">
+            <p class="header__eyebrow">Bienvenue</p>
+            <h2 class="header__title">Tableau de bord</h2>
+          </div>
+
+          <div class="header__actions">
+            <label class="search" for="site-search">
+              <span class="search__icon" aria-hidden="true">⌕</span>
+              <input
+                id="site-search"
+                class="search__field"
+                type="search"
+                placeholder="Rechercher"
+              />
+            </label>
+
+            <button
+              class="header__button"
+              type="button"
+              aria-label="Notifications"
+            >
+              🔔
+            </button>
+            <div class="user-profile" aria-label="Profil utilisateur">
+              <div class="user-profile__avatar">AL</div>
+              <div>
+                <p class="user-profile__name">Aline L.</p>
+                <p class="user-profile__role">Admin</p>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <main class="main" id="main-content">
+          <section
+            class="main__section"
+            aria-label="Contenu principal du dashboard"
+          >
+            <h3 class="main__title">Contenu principal</h3>
+            <p class="main__text">
+              Cette zone accueillera les cartes statistiques, le tableau et les
+              graphiques lors des prochaines étapes.
+            </p>
+          </section>
+        </main>
+
+        <footer class="footer">
+          <p>© 2026 AkiAdmin. Dashboard pédagogique.</p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
