@@ -4,18 +4,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard Admin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <div class="dashboard">
+      <input
+        class="menu__toggle"
+        type="checkbox"
+        id="menu__toggle"
+        aria-label="Ouvrir le menu"
+      />
       <aside class="sidebar" aria-label="Navigation latérale">
         <div class="sidebar__brand">
-          <div class="sidebar__logo" aria-hidden="true">A</div>
           <div>
-            <h1 class="sidebar__title">AkiAdmin</h1>
+            <h1 class="sidebar__title">CSW MANAGER</h1>
             <p class="sidebar__subtitle">Dashboard</p>
           </div>
         </div>
+
+        <label
+          class="menu__toggle__button"
+          for="menu__toggle"
+          aria-label="Basculer le menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
 
         <nav class="sidebar__nav">
           <a class="sidebar__link sidebar__link--active" href="#"
@@ -46,38 +68,137 @@
               />
             </label>
 
-            <button
-              class="header__button"
-              type="button"
-              aria-label="Notifications"
-            >
-              🔔
-            </button>
-            <div class="user-profile" aria-label="Profil utilisateur">
-              <div class="user-profile__avatar">AL</div>
+            <div class="user__profile" aria-label="Profil utilisateur">
+              <div class="user__profile__avatar">PR</div>
               <div>
-                <p class="user-profile__name">Aline L.</p>
-                <p class="user-profile__role">Admin</p>
+                <p class="user__profile__name">Prosper</p>
+                <p class="user__profile__role">Admin</p>
               </div>
             </div>
           </div>
         </header>
 
         <main class="main" id="main-content">
+          <section class="stats__grid" aria-label="Statistiques principales">
+            <article class="stat__card">
+              <div class="stat__card__icon" aria-hidden="true">↗</div>
+              <div>
+                <p class="stat__card__label">Revenus</p>
+                <p class="stat__card__value">$24.8K</p>
+                <p class="stat__card__trend stat__card__trend--positive">
+                  +12.4%
+                </p>
+              </div>
+            </article>
+
+            <article class="stat__card">
+              <div class="stat__card__icon" aria-hidden="true">👤</div>
+              <div>
+                <p class="stat__card__label">Utilisateurs</p>
+                <p class="stat__card__value">1,284</p>
+                <p class="stat__card__trend stat__card__trend--positive">
+                  +8.1%
+                </p>
+              </div>
+            </article>
+
+            <article class="stat__card">
+              <div class="stat__card__icon" aria-hidden="true">🛒</div>
+              <div>
+                <p class="stat__card__label">Commandes</p>
+                <p class="stat__card__value">342</p>
+                <p class="stat__card__trend stat__card__trend--neutral">
+                  +3.2%
+                </p>
+              </div>
+            </article>
+
+            <article class="stat__card">
+              <div class="stat__card__icon" aria-hidden="true">★</div>
+              <div>
+                <p class="stat__card__label">Satisfaction</p>
+                <p class="stat__card__value">94.8%</p>
+                <p class="stat__card__trend stat__card__trend--positive">
+                  +1.5%
+                </p>
+              </div>
+            </article>
+          </section>
+
           <section
-            class="main__section"
-            aria-label="Contenu principal du dashboard"
+            class="content__panel"
+            aria-label="Tableau de données récent"
           >
-            <h3 class="main__title">Contenu principal</h3>
-            <p class="main__text">
-              Cette zone accueillera les cartes statistiques, le tableau et les
-              graphiques lors des prochaines étapes.
-            </p>
+            <div class="content__panel__header">
+              <div>
+                <h3 class="content__panel__title">Activités récentes</h3>
+                <p class="content__panel__subtitle">
+                  Suivi des actions importantes
+                </p>
+              </div>
+              <a class="content__panel__link" href="#">Voir tout</a>
+            </div>
+
+            <div class="table__wrapper">
+              <table class="data__table">
+                <thead>
+                  <tr>
+                    <th>Projet</th>
+                    <th>Client</th>
+                    <th>Statut</th>
+                    <th>Date</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Refonte UI</td>
+                    <td>Nova Labs</td>
+                    <td><span class="badge badge--success">Terminé</span></td>
+                    <td>10 Jul</td>
+                  </tr>
+                  <tr>
+                    <td>Landing Page</td>
+                    <td>Blue Studio</td>
+                    <td><span class="badge badge--warning">En cours</span></td>
+                    <td>12 Jul</td>
+                  </tr>
+                  <tr>
+                    <td>Migration API</td>
+                    <td>North Corp</td>
+                    <td><span class="badge badge--danger">Urgent</span></td>
+                    <td>14 Jul</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="chart__panel" aria-label="Graphique fictif">
+            <div class="chart__panel__header">
+              <div>
+                <h3 class="chart__panel__title">Croissance mensuelle</h3>
+                <p class="chart__panel__subtitle">
+                  Performance simulée sur 6 mois
+                </p>
+              </div>
+              <span class="chart__panel__badge">+18.2%</span>
+            </div>
+
+            <div class="chart" aria-hidden="true">
+              <div class="chart__grid"></div>
+              <div class="chart__line"></div>
+              <div class="chart__point chart__point--1"></div>
+              <div class="chart__point chart__point--2"></div>
+              <div class="chart__point chart__point--3"></div>
+              <div class="chart__point chart__point--4"></div>
+              <div class="chart__point chart__point--5"></div>
+              <div class="chart__point chart__point--6"></div>
+            </div>
           </section>
         </main>
 
         <footer class="footer">
-          <p>© 2026 AkiAdmin. Dashboard pédagogique.</p>
+          <p>© 2026 CSW MANAGER</p>
         </footer>
       </div>
     </div>
