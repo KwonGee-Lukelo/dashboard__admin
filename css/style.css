@@ -61,6 +61,7 @@ input:focus-visible {
   display: flex;
   background: var(--background);
   position: relative;
+  overflow: hidden;
 }
 
 .menu__toggle {
@@ -75,6 +76,12 @@ input:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  flex-shrink: 0;
+  z-index: 20;
 }
 
 .sidebar__brand {
@@ -150,6 +157,9 @@ input:focus-visible {
   flex: 1;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+  overflow-y: auto;
+  margin-left: 280px;
 }
 
 .header {
@@ -569,6 +579,7 @@ input:focus-visible {
 @media (max-width: 768px) {
   .dashboard {
     flex-direction: column;
+    overflow: visible;
   }
 
   .menu__toggle {
@@ -580,15 +591,32 @@ input:focus-visible {
     border-right: 0;
     border-bottom: 1px solid var(--border);
     padding: 20px 16px;
-    gap: 16px;
+    gap: 12px;
     position: sticky;
     top: 0;
     z-index: 10;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+  }
+
+  .dashboard__content {
+    min-height: auto;
+    overflow-y: visible;
+    margin-left: 0;
+  }
+
+  .sidebar__brand {
+    flex: 1;
+    min-width: 0;
   }
 
   .menu__toggle__button {
     display: flex;
-    align-self: flex-end;
+    margin-left: auto;
   }
 
   .sidebar__nav {
@@ -596,6 +624,7 @@ input:focus-visible {
     flex-direction: column;
     gap: 8px;
     padding-top: 4px;
+    width: 100%;
   }
 
   .sidebar__link {
