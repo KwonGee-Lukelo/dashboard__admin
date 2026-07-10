@@ -528,6 +528,7 @@ input:focus-visible {
 @media (max-width: 1024px) {
   .sidebar {
     width: 220px;
+    padding: 24px 16px;
   }
 
   .header {
@@ -552,6 +553,18 @@ input:focus-visible {
     width: 100%;
     border-right: 0;
     border-bottom: 1px solid var(--border);
+    padding: 20px 16px;
+    gap: 20px;
+  }
+
+  .sidebar__nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .sidebar__link {
+    flex: 1 1 calc(50% - 8px);
+    text-align: center;
   }
 
   .header {
@@ -574,12 +587,13 @@ input:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .content-panel__header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+  .content-panel,
+  .chart-panel,
+  .stat-card {
+    padding: 16px;
   }
 
+  .content-panel__header,
   .chart-panel__header {
     flex-direction: column;
     align-items: flex-start;
