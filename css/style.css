@@ -63,7 +63,7 @@ input:focus-visible {
   position: relative;
 }
 
-.menu-toggle {
+.menu__toggle {
   display: none;
 }
 
@@ -115,7 +115,7 @@ input:focus-visible {
   gap: 8px;
 }
 
-.menu-toggle__button {
+.menu__toggle__button {
   display: none;
   flex-direction: column;
   gap: 4px;
@@ -123,7 +123,7 @@ input:focus-visible {
   padding: 6px;
 }
 
-.menu-toggle__button span {
+.menu__toggle__button span {
   display: block;
   width: 22px;
   height: 2px;
@@ -232,7 +232,7 @@ input:focus-visible {
   transform: translateY(-1px);
 }
 
-.user-profile {
+.user__profile {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -242,7 +242,7 @@ input:focus-visible {
   border: 1px solid var(--border);
 }
 
-.user-profile__avatar {
+.user__profile__avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -254,17 +254,17 @@ input:focus-visible {
   font-weight: 600;
 }
 
-.user-profile__name,
-.user-profile__role {
+.user__profile__name,
+.user__profile__role {
   margin: 0;
 }
 
-.user-profile__name {
+.user__profile__name {
   font-weight: 600;
   color: var(--text-primary);
 }
 
-.user-profile__role {
+.user__profile__role {
   color: var(--text-secondary);
   font-size: 0.85rem;
 }
@@ -277,13 +277,13 @@ input:focus-visible {
   gap: 24px;
 }
 
-.stats-grid {
+.stats__grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
 }
 
-.stat-card {
+.stat__card {
   background: var(--card-background);
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
@@ -294,7 +294,7 @@ input:focus-visible {
   gap: 16px;
 }
 
-.stat-card__icon {
+.stat__card__icon {
   width: 44px;
   height: 44px;
   border-radius: 12px;
@@ -305,13 +305,13 @@ input:focus-visible {
   font-size: 1.1rem;
 }
 
-.stat-card__label {
+.stat__card__label {
   margin: 0 0 4px;
   color: var(--text-secondary);
   font-size: 0.95rem;
 }
 
-.stat-card__value {
+.stat__card__value {
   margin: 0;
   font-family: "JetBrains Mono", monospace;
   font-size: 1.2rem;
@@ -319,21 +319,21 @@ input:focus-visible {
   color: var(--text-primary);
 }
 
-.stat-card__trend {
+.stat__card__trend {
   margin: 4px 0 0;
   font-size: 0.85rem;
   font-weight: 600;
 }
 
-.stat-card__trend--positive {
+.stat__card__trend--positive {
   color: var(--success);
 }
 
-.stat-card__trend--neutral {
+.stat__card__trend--neutral {
   color: var(--accent);
 }
 
-.content-panel {
+.content__panel {
   background: var(--card-background);
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
@@ -341,63 +341,63 @@ input:focus-visible {
   padding: 24px;
 }
 
-.content-panel__header {
+.content__panel__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
 }
 
-.content-panel__title {
+.content__panel__title {
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: var(--text-primary);
 }
 
-.content-panel__subtitle {
+.content__panel__subtitle {
   margin: 4px 0 0;
   color: var(--text-secondary);
   font-size: 0.95rem;
 }
 
-.content-panel__link {
+.content__panel__link {
   color: var(--accent);
   text-decoration: none;
   font-weight: 600;
 }
 
-.table-wrapper {
+.table__wrapper {
   overflow-x: auto;
 }
 
-.data-table {
+.data__table {
   width: 100%;
   border-collapse: collapse;
   border-radius: var(--radius-table);
   overflow: hidden;
 }
 
-.data-table th,
-.data-table td {
+.data__table th,
+.data__table td {
   padding: 14px 12px;
   text-align: left;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.data-table thead {
+.data__table thead {
   background: rgba(255, 255, 255, 0.04);
 }
 
-.data-table th {
+.data__table th {
   color: var(--text-secondary);
   font-weight: 600;
 }
 
-.data-table td {
+.data__table td {
   color: var(--text-primary);
 }
 
-.data-table tbody tr:hover {
+.data__table tbody tr:hover {
   background: rgba(96, 165, 250, 0.08);
 }
 
@@ -424,7 +424,7 @@ input:focus-visible {
   color: var(--danger);
 }
 
-.chart-panel {
+.chart__panel {
   background: var(--card-background);
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
@@ -432,26 +432,26 @@ input:focus-visible {
   padding: 24px;
 }
 
-.chart-panel__header {
+.chart__panel__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.chart-panel__title {
+.chart__panel__title {
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: var(--text-primary);
 }
 
-.chart-panel__subtitle {
+.chart__panel__subtitle {
   margin: 4px 0 0;
   color: var(--text-secondary);
   font-size: 0.95rem;
 }
 
-.chart-panel__badge {
+.chart__panel__badge {
   padding: 8px 12px;
   border-radius: 999px;
   background: rgba(37, 99, 235, 0.16);
@@ -546,6 +546,7 @@ input:focus-visible {
   background: var(--surface);
 }
 
+/* Partie responsive */
 @media (max-width: 1024px) {
   .sidebar {
     width: 220px;
@@ -560,7 +561,7 @@ input:focus-visible {
     padding: 24px;
   }
 
-  .stats-grid {
+  .stats__grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -570,7 +571,7 @@ input:focus-visible {
     flex-direction: column;
   }
 
-  .menu-toggle {
+  .menu__toggle {
     display: none;
   }
 
@@ -585,7 +586,7 @@ input:focus-visible {
     z-index: 10;
   }
 
-  .menu-toggle__button {
+  .menu__toggle__button {
     display: flex;
     align-self: flex-end;
   }
@@ -602,7 +603,7 @@ input:focus-visible {
     text-align: left;
   }
 
-  .menu-toggle:checked + .sidebar .sidebar__nav {
+  .menu__toggle:checked + .sidebar .sidebar__nav {
     display: flex;
   }
 
@@ -622,18 +623,18 @@ input:focus-visible {
     min-width: 0;
   }
 
-  .stats-grid {
+  .stats__grid {
     grid-template-columns: 1fr;
   }
 
-  .content-panel,
-  .chart-panel,
-  .stat-card {
+  .content__panel,
+  .chart__panel,
+  .stat__card {
     padding: 16px;
   }
 
-  .content-panel__header,
-  .chart-panel__header {
+  .content__panel__header,
+  .chart__panel__header {
     flex-direction: column;
     align-items: flex-start;
     gap: 8px;
