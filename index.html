@@ -14,6 +14,12 @@
   </head>
   <body>
     <div class="dashboard">
+      <input
+        class="menu-toggle"
+        type="checkbox"
+        id="menu-toggle"
+        aria-label="Ouvrir le menu"
+      />
       <aside class="sidebar" aria-label="Navigation latérale">
         <div class="sidebar__brand">
           <div class="sidebar__logo" aria-hidden="true">A</div>
@@ -22,6 +28,16 @@
             <p class="sidebar__subtitle">Dashboard</p>
           </div>
         </div>
+
+        <label
+          class="menu-toggle__button"
+          for="menu-toggle"
+          aria-label="Basculer le menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
 
         <nav class="sidebar__nav">
           <a class="sidebar__link sidebar__link--active" href="#"
